@@ -23,8 +23,34 @@ class CoffeeTile extends StatelessWidget {
                borderRadius: BorderRadius.circular(12),
                child: Image.asset('lib/images/latte.jpg'),
               ),
+              Padding(
+              padding: const EdgeInsets.symmetric(vertical: 12.0),
+              child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
               Text('Latte',style: TextStyle(fontSize: 20)),
-              Text('With Almond milk',style: TextStyle(color: Colors.grey[700])),
+              SizedBox(height: 4),
+              Text('With Almond milk',style: TextStyle(color: Colors.grey[700] )),
+              ],
+              ),
+              ),
+              Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: 
+              Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+                Text('\$4.00'),
+                Container(
+                  padding: EdgeInsets.all(4),
+                  decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(6)),
+                  child: Icon(Icons.add),
+                ),
+ 
+               ],
+              ),
+              ),
+              
               ],
             ),
            ),

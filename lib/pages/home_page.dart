@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:coffeeappui/util/coffee_tile.dart';
+import 'package:coffeeappui/util/coffee_type.dart';
 
 void main() {
   runApp(const HomePage());
@@ -65,6 +66,16 @@ class HomePage extends StatelessWidget {
         ),
         ),
         SizedBox(height: 25),
+        Container(height: 50,
+        child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          CoffeeType(coffeeType: 'Capuccino',isSelected: true),
+          CoffeeType(coffeeType: 'latte',isSelected: false),
+          CoffeeType(coffeeType: 'black',isSelected: false),
+        ],
+        ),
+        ),
         Expanded(
          child: ListView(
          scrollDirection: Axis.horizontal,
