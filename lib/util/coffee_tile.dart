@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 
 
 class CoffeeTile extends StatelessWidget {
-  const CoffeeTile({super.key});
+final String coffeeImagePath;
+final String coffeeName;
+final String coffeePrice;
+  CoffeeTile({
+   required this.coffeeImagePath,
+   required this.coffeeName,
+   required this.coffeePrice,
+  });
 
   // This widget is the root of your application.
   @override
@@ -21,14 +28,14 @@ class CoffeeTile extends StatelessWidget {
               children: [
               ClipRRect(
                borderRadius: BorderRadius.circular(12),
-               child: Image.asset('lib/images/latte.jpg'),
+               child: Image.asset(coffeeImagePath),
               ),
               Padding(
               padding: const EdgeInsets.symmetric(vertical: 12.0),
               child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-              Text('Latte',style: TextStyle(fontSize: 20)),
+              Text(coffeeName,style: TextStyle(fontSize: 20)),
               SizedBox(height: 4),
               Text('With Almond milk',style: TextStyle(color: Colors.grey[700] )),
               ],
@@ -40,7 +47,7 @@ class CoffeeTile extends StatelessWidget {
               Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                children: [
-                Text('\$4.00'),
+                Text('\$' + coffeePrice),
                 Container(
                   padding: EdgeInsets.all(4),
                   decoration: BoxDecoration(color: Colors.orange,borderRadius: BorderRadius.circular(6)),
